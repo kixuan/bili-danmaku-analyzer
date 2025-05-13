@@ -41,3 +41,62 @@ git clone https://github.com/SunSpace0/bili-danmaku-analyzer.git
 
 # 安装依赖
 pip install -r requirements.txt
+
+
+### 基础使用
+```bash
+# 抓取指定视频弹幕（需要替换SESSDATA）
+python main.py \
+    --bvid BV1xx411x7xx \ 
+    --date 2023-01-01 \
+    --cookie "SESSDATA=your_cookie_value"
+```
+
+### 参数说明
+| 参数      | 必选 | 说明                     |
+|-----------|------|--------------------------|
+| `--bvid`  | 是   | B站视频BV号              |
+| `--date`  | 是   | 日期（格式YYYY-MM-DD）   |
+| `--cookie`| 是   | 登录Cookie（含SESSDATA） |
+
+---
+
+## 🏗️ 项目结构
+```
+bili-danmaku-analyzer/
+├── src/                  # 核心源码
+│   ├── bilibili_api.py   # API请求模块
+│   ├── danmaku_parser.py # Protobuf解析器
+│   └── text_analyzer.py   # 文本分析引擎
+├── docs/                 # 技术文档
+├── requirements.txt      # 依赖清单
+└── main.py                # 主程序入口
+```
+
+---
+
+## 🔗 技术生态
+本项目与我的技术博客构成完整知识体系：
+1. **逆向工程**：详解Protobuf协议破解过程
+2. **数据清洗**：分享正则表达式优化技巧
+3. **算法调优**：探讨SnowNLP的领域适配方案
+4. **可视化设计**：展示Pyecharts高级配置方法
+
+---
+
+## ⚠️ 免责声明
+1. 本项目仅用于**技术研究**，请勿用于侵犯用户隐私
+2. 请遵守[B站Robots协议](https://www.bilibili.com/robots.txt)
+3. 使用者需自行承担法律风险
+
+---
+
+## 🤝 参与贡献
+欢迎通过以下方式参与：
+1. 提交Issue反馈问题
+2. Fork后提交PR改进功能
+3. 撰写技术文档或测试用例
+
+---
+
+License: [MIT](https://opensource.org/licenses/MIT)
