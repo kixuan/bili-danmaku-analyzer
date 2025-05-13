@@ -1,0 +1,23 @@
+// 这是一段.proto文件的内容示例
+syntax = "proto3"; // 指定protobuf版本
+
+// 定义弹幕消息体本身
+message DanmakuElem {
+    int64 id = 1;        // 弹幕Dmid
+    int32 progress = 2;  // 弹幕出现时间，单位毫秒
+    int32 mode = 3;      // 弹幕模式 1-3滚动 4底端 5顶端 6逆向 7特殊
+    int32 fontsize = 4;  // 字体大小
+    uint32 color = 5;     // 颜色，RGB值转换成的十进制数
+    string midHash = 6;   // 发送者UID的CRC32 Hash，用于识别用户，但不是真实UID
+    string content = 7;   // 弹幕内容！！！！这个是我们最想要的
+    int64 ctime = 8;     // 发送时间戳，单位秒
+    int32 weight = 9;    // 权重，用于智能屏蔽
+    // ... 可能还有其他字段，但以上是核心
+}
+
+// 定义整个弹幕包的回复结构
+message DmSegMobileReply {
+    repeated DanmakuElem elems = 1; // 包含多条弹幕消息 (repeated表示这是个列表)
+    int32 state = 2;               // 是否已关闭弹幕 0表示未关闭
+    // ... 其他辅助字段
+}
