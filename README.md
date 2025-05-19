@@ -10,8 +10,8 @@
 ## 📚 相关技术博客
 **《B站弹幕爬虫实战指南》系列文章**  
 👉 [（上篇）Protobuf协议解析与海量数据抓取](https://zhuanlan.zhihu.com/p/1905612606087099606)  
-👉 下篇：SnowNLP情感计算与Pyecharts可视化（即将发布）  
-👉 终篇：数据挖掘视角下的技术解析（即将发布） 
+👉 [下篇：SnowNLP情感计算与Pyecharts可视化](https://zhuanlan.zhihu.com/p/1905614518819731077  )
+👉 [终篇：数据挖掘视角下的技术解析]( https://zhuanlan.zhihu.com/p/1906272059723581118)
 
 ---
 
